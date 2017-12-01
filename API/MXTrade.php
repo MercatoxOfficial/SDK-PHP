@@ -38,7 +38,7 @@ class MXTrade
         $this->private = $private_key;
     }
 
-    public function curl($method, $data)
+    private function curl($method, $data)
     {
         $access = $this->access;
 
