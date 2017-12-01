@@ -7,7 +7,6 @@
 $api = new MXTrade('MX:U00000:XXXXXXXXXXXXXXXXXXXXXXXXXXXX', 'MX:P00000:XXXXXXXXXXXXXXXXXXXXXXXXXXXX'); // Specify your public and private keys
 
 $public = $api->pub(); // Set PUBLIC endpoint
-$private_api = $api->priv(); // Set PRIVATE endpoint
 
 /**
  * Just specify any API method as class member. Even if your SDK is not up to date it will work fine :)
@@ -19,6 +18,8 @@ $private_api = $api->priv(); // Set PRIVATE endpoint
  
 $symbols = $public->symbols(); 
 $book = $public->book('ETH_BTC');
+
+$private = $api->priv(); // Set PRIVATE endpoint
 
 $btc_balance = $private->getBalance(['symbol' => 'BTC']);
 $new_order = $private->order([
